@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import './App.css';
-import {getAllPokemon} from "/Users/yuto/Downloads/yuto/pokemon-app/src/utils/pokemon";
+import {getAllPokemon} from "./utils/pokemon.js";
 
 function App() {
   const initialURL ="https://pokeapi.co/api/v2/pokemon";
@@ -13,8 +13,7 @@ function App() {
       console.log(res);
     };
     fetchPokemonData();
-  }, []
-  );
+  }, []);
   return <div className="App"></div>
 }
 
