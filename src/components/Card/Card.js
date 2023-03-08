@@ -1,4 +1,5 @@
 import React from 'react'
+import "./Card.css";
 
 const Card = ({ pokemon }) => {
   return (
@@ -6,17 +7,17 @@ const Card = ({ pokemon }) => {
     <div className="cardImg">
       <img src={pokemon.sprites.front_dafault} alt = "" />
     </div>
-      <h3 className="cardName">{pokemon.name}</h3>
-      <div className = "cardTypes">
-        <div>Type</div>
-      </div>
-    {pokemon.types.map((type) => {
-      return (
-      <div>
-        <span className = "typeName">{type.type.name}</span>
-      </div>
-      );
-    })}
+    <h3 className="cardName">{pokemon.name}</h3>
+    <div className = "cardTypes">
+      <div>Type</div>
+      {pokemon.types.map((type) => {
+        return (
+          <div>
+            <span className = "typeName">{type.type.name}</span>
+          </div>
+        );
+      })}
+    </div>
     <div className = "cardInfo">
       <div className ="cardData">
         <p className = "title">Weight : {pokemon.weight}</p>
@@ -25,7 +26,7 @@ const Card = ({ pokemon }) => {
         <p className = "title">Height : {pokemon.height}</p>
       </div>
       <div className ="cardData">
-        <p className = "title">Abilities : {pokemon.abilities[0].abilitiy.name}</p>
+        <p className = "title">Abilities : {pokemon.abilities[0].ability.name}</p>
       </div>
     </div>
   </div>

@@ -13,7 +13,7 @@ function App() {
     const fetchPokemonData = async () => {
 
       //retrieve all Pokemon data
-      let res = getAllPokemon(initialURL);
+      let res = await getAllPokemon(initialURL);
       //get each pokemon's each data
       loadPokemon(res.results);
       setLoading(false);
