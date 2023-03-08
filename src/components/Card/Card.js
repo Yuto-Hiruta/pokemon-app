@@ -4,7 +4,7 @@ const Card = ({ pokemon }) => {
   return (
   <div className="card">
     <div className="cardImg">
-      <img src={pokemon.sprites.front_dafault}/>
+      <img src={pokemon.sprites.front_dafault} alt = "" />
     </div>
       <h3 className="cardName">{pokemon.name}</h3>
       <div className = "cardTypes">
@@ -15,7 +15,7 @@ const Card = ({ pokemon }) => {
       <div>
         <span className = "typeName">{type.type.name}</span>
       </div>
-      )
+      );
     })}
     <div className = "cardInfo">
       <div className ="cardData">
@@ -28,7 +28,7 @@ const Card = ({ pokemon }) => {
         <p className = "title">Abilities : {pokemon.abilities[0].abilitiy.name}</p>
       </div>
     </div>
-</div>
-);
+  </div>
+  );
 };
 export default Card;
